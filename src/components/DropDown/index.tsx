@@ -25,6 +25,14 @@ export function DropDown() {
           <li>
             <h2>VIEW PROFILE</h2>
             <UserIcon />
+          </li>
+          <li>
+            <h2>SETTINGS</h2>
+            <SettingsIcon />
+          </li>
+          <li>
+            <h2>Logout</h2>
+            <LogOutIcon />
           </li>        
         </Main>
       )}
