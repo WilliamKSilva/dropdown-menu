@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ArrowDownS } from '@styled-icons/remix-line'
+import { RightArrow } from '@styled-icons/boxicons-solid'
 import { Plus } from '@styled-icons/evil'
 import { User } from '@styled-icons/boxicons-regular'
 import { Settings2Outline } from '@styled-icons/evaicons-outline'
@@ -45,7 +45,7 @@ export const Main = styled.ul`
       opacity: 1;
       transform: translateY(0);
     }
-  }
+  }  
   
   border-radius: 5px;
   flex-direction: column;
@@ -54,15 +54,21 @@ export const Main = styled.ul`
   li {
     display: flex;
     align-items: center;
-    padding: 0.8rem;            
+    padding: 0.8rem;
+    transition: 0.2s;            
 
     flex-direction: row;
     justify-content: space-between;
+
+    &:hover {
+      filter: brightness(0.2);
+    }
 
     h2 {
       font-size: 15px;
       color: #FFFFFF;
       font-weight: 600;
+      cursor: pointer;
     }
 
     img {
@@ -73,9 +79,19 @@ export const Main = styled.ul`
 
 export const Button = styled.button``;
 
-export const ArrowIcon = styled(ArrowDownS)`
-  width: 20px;
+export const ArrowIcon = styled(RightArrow)`
+  width: 15px;
   color: #FFFFFF;
+  cursor: pointer;
+
+  overflow: hidden;
+  transition-duration: 0.4s;
+  transition-property: transform;
+
+  &:hover {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
 `;
 
 export const PlusIcon = styled(Plus)`
