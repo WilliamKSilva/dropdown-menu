@@ -1,6 +1,6 @@
 import { DropDown } from './components/DropDown';
 import { Container } from './styles';
-import { GlobalStyle } from './styles/global';
+import { GlobalStyle } from './global/global';
 
 function App() {
   return (

@@ -31,7 +31,7 @@ export const Header = styled.header`
   }
 `;
 
-export const Main = styled.main`
+export const Main = styled.ul`
   display: flex;
   width: 14.4rem;
   animation: fadeIn 0.4s ease-in-out;
@@ -51,7 +51,7 @@ export const Main = styled.main`
   flex-direction: column;
   background-color: #fe4d55;    
 
-  section {
+  li {
     display: flex;
     align-items: center;
     padding: 0.8rem;            
@@ -63,6 +63,10 @@ export const Main = styled.main`
       font-size: 15px;
       color: #FFFFFF;
       font-weight: 600;
+    }
+
+    img {
+      width: 10px;
     }
   }
 `; 

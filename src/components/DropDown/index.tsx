@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { ReactChildren, useState } from "react";
 import { ArrowIcon, Container, Header, LogOutIcon, Main, PlusIcon, SettingsIcon, UserIcon } from "./styles";
 
 interface Props {
-  title: string;
   itemTitle: string;
-  icon: string;
+  icon?: string;
+  content: ReactChildren;
 }
 
-export function DropDown({}: Props) {
+export function DropDown() {
   const [ isVisible, setIsVisible ] = useState(false);
   
   return (
@@ -18,10 +18,14 @@ export function DropDown({}: Props) {
       </Header>
       {isVisible && (
         <Main>
-          <section>
+          <li>
             <h2>NEW PROJECT</h2>
             <PlusIcon />
-          </section>        
+          </li>
+          <li>
+            <h2>VIEW PROFILE</h2>
+            <UserIcon />
+          </li>        
         </Main>
       )}
     </Container>
